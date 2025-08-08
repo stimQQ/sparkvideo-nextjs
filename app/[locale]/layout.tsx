@@ -13,13 +13,15 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { locale }
+  params
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
+  const { locale } = await params;
   const isZh = locale === 'zh';
   
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://sparkvideo.com'),
     title: {
       default: isZh ? 'SparkVideo - 专业视频音频处理平台' : 'SparkVideo - Professional Video & Audio Processing Platform',
       template: isZh ? '%s | SparkVideo' : '%s | SparkVideo'
@@ -83,11 +85,6 @@ export async function generateMetadata({
         'zh': 'https://sparkvideo.com/zh',
       },
     },
-    viewport: {
-      width: 'device-width',
-      initialScale: 1,
-      maximumScale: 1,
-    },
     icons: {
       icon: '/favicon.ico',
       shortcut: '/favicon-16x16.png',
@@ -96,13 +93,23 @@ export async function generateMetadata({
   };
 }
 
+export function generateViewport() {
+  return {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  };
+}
+
 export default async function RootLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  
   if (!locales.includes(locale as any)) {
     notFound();
   }
