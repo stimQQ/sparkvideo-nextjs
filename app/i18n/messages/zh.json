@@ -1,0 +1,522 @@
+{
+  "common": {
+    "appName": "SparkVideo",
+    "tagline": "专业的视频音频处理平台",
+    "loading": "加载中...",
+    "error": "出错了",
+    "retry": "重试",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "close": "关闭",
+    "upload": "上传",
+    "download": "下载",
+    "process": "处理",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "view": "查看",
+    "share": "分享",
+    "copy": "复制",
+    "paste": "粘贴",
+    "selectFile": "选择文件",
+    "dragDropFile": "拖拽文件到此处或点击选择",
+    "fileSize": "文件大小",
+    "duration": "时长",
+    "format": "格式",
+    "quality": "质量",
+    "resolution": "分辨率",
+    "bitrate": "比特率",
+    "fps": "帧率",
+    "status": {
+      "pending": "等待中",
+      "processing": "处理中",
+      "completed": "已完成",
+      "failed": "失败",
+      "cancelled": "已取消"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "video": "视频处理",
+    "audio": "音频处理",
+    "documents": "文档",
+    "blog": "博客",
+    "pricing": "定价",
+    "about": "关于",
+    "contact": "联系我们",
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出",
+    "dashboard": "控制台",
+    "profile": "个人资料",
+    "settings": "设置",
+    "subscription": "订阅"
+  },
+  "hero": {
+    "title": "专业视频音频处理，一站式解决方案",
+    "subtitle": "使用AI技术处理您的视频和音频文件，支持压缩、转换、增强、转录等多种功能",
+    "cta": {
+      "getStarted": "免费开始",
+      "learnMore": "了解更多",
+      "watchDemo": "观看演示"
+    },
+    "features": {
+      "videoProcessing": "视频处理",
+      "audioTranscription": "音频转录",
+      "aiEnhancement": "AI增强",
+      "multiFormat": "多格式支持"
+    }
+  },
+  "features": {
+    "title": "强大功能",
+    "subtitle": "专业工具满足您的所有需求",
+    "video": {
+      "title": "视频处理",
+      "compress": "智能压缩",
+      "compressDesc": "保持画质的同时减小文件大小",
+      "convert": "格式转换",
+      "convertDesc": "支持MP4、WebM、AVI等多种格式",
+      "crop": "裁剪调整",
+      "cropDesc": "调整视频比例和尺寸",
+      "merge": "视频合并",
+      "mergeDesc": "将多个视频合并为一个",
+      "split": "视频分割",
+      "splitDesc": "按时间或大小分割视频",
+      "enhance": "视频增强",
+      "enhanceDesc": "AI驱动的视频质量提升"
+    },
+    "audio": {
+      "title": "音频处理",
+      "transcribe": "语音转文字",
+      "transcribeDesc": "高精度语音识别，支持多语言",
+      "translate": "音频翻译",
+      "translateDesc": "保持原声特征的音频翻译",
+      "convert": "格式转换",
+      "convertDesc": "支持MP3、WAV、AAC等格式",
+      "enhance": "音频增强",
+      "enhanceDesc": "降噪和音质提升"
+    },
+    "ai": {
+      "title": "AI增强功能",
+      "denoise": "智能降噪",
+      "denoiseDesc": "去除视频和音频噪音",
+      "deblur": "去模糊",
+      "deblurDesc": "清晰化模糊视频",
+      "removeWatermark": "去水印",
+      "removeWatermarkDesc": "智能移除视频水印",
+      "removeBackground": "去背景",
+      "removeBackgroundDesc": "AI智能抠图去背景",
+      "subtitle": "字幕生成",
+      "subtitleDesc": "自动生成多语言字幕"
+    }
+  },
+  "pricing": {
+    "title": "选择适合您的方案",
+    "subtitle": "灵活的定价，满足不同需求",
+    "monthly": "月付",
+    "yearly": "年付",
+    "save": "节省",
+    "currency": "货币",
+    "popular": "最受欢迎",
+    "currentPlan": "当前方案",
+    "upgrade": "升级",
+    "downgrade": "降级",
+    "contact": "联系销售",
+    "plans": {
+      "free": {
+        "name": "免费版",
+        "price": "￥0",
+        "description": "适合个人用户体验",
+        "features": [
+          "每日5个视频处理",
+          "最大100MB文件",
+          "基础格式转换",
+          "720p输出质量",
+          "社区支持"
+        ]
+      },
+      "premium": {
+        "name": "专业版",
+        "price": "￥99",
+        "priceYearly": "￥990",
+        "description": "适合内容创作者",
+        "features": [
+          "每日100个视频处理",
+          "最大2GB文件",
+          "所有格式转换",
+          "4K输出质量",
+          "AI增强功能",
+          "批量处理",
+          "优先技术支持",
+          "去除水印"
+        ]
+      },
+      "enterprise": {
+        "name": "企业版",
+        "price": "定制",
+        "description": "适合团队和企业",
+        "features": [
+          "无限视频处理",
+          "最大5GB文件",
+          "所有高级功能",
+          "8K输出质量",
+          "API访问",
+          "专属客户经理",
+          "定制化功能",
+          "SLA保障",
+          "优先处理队列"
+        ]
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录您的账户",
+      "email": "邮箱",
+      "password": "密码",
+      "rememberMe": "记住我",
+      "forgotPassword": "忘记密码？",
+      "submit": "登录",
+      "noAccount": "还没有账户？",
+      "signUp": "立即注册",
+      "or": "或",
+      "googleLogin": "使用Google登录",
+      "errors": {
+        "invalidCredentials": "邮箱或密码错误",
+        "serverError": "服务器错误，请稍后重试"
+      }
+    },
+    "register": {
+      "title": "创建账户",
+      "subtitle": "开始您的视频处理之旅",
+      "name": "姓名",
+      "email": "邮箱",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "agreeTerms": "我同意服务条款和隐私政策",
+      "submit": "注册",
+      "hasAccount": "已有账户？",
+      "signIn": "立即登录",
+      "or": "或",
+      "googleSignUp": "使用Google注册",
+      "errors": {
+        "emailExists": "邮箱已被注册",
+        "passwordMismatch": "密码不匹配",
+        "weakPassword": "密码强度不够",
+        "serverError": "服务器错误，请稍后重试"
+      }
+    },
+    "forgotPassword": {
+      "title": "重置密码",
+      "subtitle": "输入您的邮箱，我们将发送重置链接",
+      "email": "邮箱",
+      "submit": "发送重置链接",
+      "backToLogin": "返回登录",
+      "success": "重置链接已发送到您的邮箱"
+    }
+  },
+  "dashboard": {
+    "title": "控制台",
+    "welcome": "欢迎回来，{name}",
+    "overview": "概览",
+    "recentTasks": "最近任务",
+    "usage": "使用情况",
+    "quickActions": "快速操作",
+    "stats": {
+      "videosProcessed": "处理视频数",
+      "storageUsed": "已用存储",
+      "processingTime": "处理时间",
+      "savedSpace": "节省空间"
+    },
+    "tasks": {
+      "title": "任务列表",
+      "empty": "暂无任务",
+      "viewAll": "查看全部",
+      "retry": "重试",
+      "cancel": "取消",
+      "download": "下载结果"
+    }
+  },
+  "video": {
+    "upload": {
+      "title": "上传视频",
+      "selectFile": "选择视频文件",
+      "supportedFormats": "支持格式：MP4, AVI, MOV, WMV, FLV, WebM",
+      "maxSize": "最大文件大小：{size}",
+      "uploading": "上传中...",
+      "uploadComplete": "上传完成",
+      "uploadFailed": "上传失败"
+    },
+    "process": {
+      "title": "处理选项",
+      "selectOperation": "选择处理操作",
+      "compress": {
+        "title": "压缩视频",
+        "quality": "质量",
+        "targetSize": "目标大小",
+        "preset": {
+          "high": "高质量",
+          "medium": "中等质量",
+          "low": "低质量",
+          "custom": "自定义"
+        }
+      },
+      "convert": {
+        "title": "格式转换",
+        "targetFormat": "目标格式",
+        "videoCodec": "视频编码",
+        "audioCodec": "音频编码"
+      },
+      "crop": {
+        "title": "裁剪视频",
+        "aspectRatio": "宽高比",
+        "custom": "自定义",
+        "presets": {
+          "16:9": "16:9 (宽屏)",
+          "4:3": "4:3 (标准)",
+          "1:1": "1:1 (正方形)",
+          "9:16": "9:16 (竖屏)"
+        }
+      },
+      "enhance": {
+        "title": "增强视频",
+        "denoise": "降噪",
+        "deblur": "去模糊",
+        "stabilize": "防抖",
+        "colorCorrect": "色彩校正",
+        "removeWatermark": "去水印",
+        "removeBackground": "去背景"
+      }
+    },
+    "download": {
+      "title": "下载视频",
+      "fromUrl": "从URL下载",
+      "supportedPlatforms": "支持平台",
+      "enterUrl": "输入视频URL",
+      "parse": "解析",
+      "parsing": "解析中...",
+      "selectQuality": "选择质量",
+      "download": "下载"
+    }
+  },
+  "audio": {
+    "upload": {
+      "title": "上传音频",
+      "selectFile": "选择音频文件",
+      "supportedFormats": "支持格式：MP3, WAV, AAC, FLAC, OGG",
+      "maxSize": "最大文件大小：{size}"
+    },
+    "transcribe": {
+      "title": "音频转文字",
+      "language": "语言",
+      "autoDetect": "自动检测",
+      "selectLanguage": "选择语言",
+      "transcribing": "转录中...",
+      "result": "转录结果",
+      "accuracy": "准确度",
+      "editTranscript": "编辑文本",
+      "exportAs": "导出为",
+      "formats": {
+        "txt": "纯文本",
+        "srt": "SRT字幕",
+        "vtt": "WebVTT字幕",
+        "json": "JSON格式"
+      }
+    },
+    "translate": {
+      "title": "音频翻译",
+      "sourceLanguage": "源语言",
+      "targetLanguage": "目标语言",
+      "preserveVoice": "保持原声特征",
+      "translating": "翻译中..."
+    }
+  },
+  "document": {
+    "title": "文档管理",
+    "create": "创建文档",
+    "fromTranscription": "从转录创建",
+    "edit": "编辑文档",
+    "share": "分享文档",
+    "export": "导出",
+    "formats": {
+      "pdf": "PDF文档",
+      "docx": "Word文档",
+      "html": "网页"
+    },
+    "editor": {
+      "title": "文档编辑器",
+      "formatting": "格式",
+      "bold": "粗体",
+      "italic": "斜体",
+      "underline": "下划线",
+      "heading": "标题",
+      "list": "列表",
+      "link": "链接",
+      "image": "图片",
+      "table": "表格"
+    }
+  },
+  "blog": {
+    "title": "博客",
+    "latest": "最新文章",
+    "popular": "热门文章",
+    "categories": "分类",
+    "tags": "标签",
+    "search": "搜索文章",
+    "readMore": "阅读更多",
+    "minuteRead": "{count}分钟阅读",
+    "publishedOn": "发布于",
+    "author": "作者",
+    "share": "分享",
+    "related": "相关文章",
+    "comments": "评论"
+  },
+  "subscription": {
+    "title": "订阅管理",
+    "currentPlan": "当前方案",
+    "usage": "使用情况",
+    "billing": "账单",
+    "upgrade": "升级方案",
+    "cancel": "取消订阅",
+    "renew": "续费",
+    "history": "账单历史",
+    "nextBilling": "下次账单日期",
+    "limits": {
+      "title": "使用限制",
+      "dailyVideos": "每日视频处理",
+      "fileSize": "最大文件大小",
+      "storage": "存储空间",
+      "concurrent": "并发任务",
+      "apiCalls": "API调用"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "profile": {
+      "title": "个人资料",
+      "name": "姓名",
+      "email": "邮箱",
+      "phone": "电话",
+      "avatar": "头像",
+      "bio": "简介",
+      "update": "更新资料"
+    },
+    "preferences": {
+      "title": "偏好设置",
+      "language": "语言",
+      "timezone": "时区",
+      "currency": "货币",
+      "theme": "主题",
+      "notifications": "通知",
+      "emailNotifications": "邮件通知",
+      "pushNotifications": "推送通知"
+    },
+    "security": {
+      "title": "安全设置",
+      "changePassword": "修改密码",
+      "twoFactor": "双因素认证",
+      "sessions": "活动会话",
+      "apiKeys": "API密钥"
+    },
+    "videoDefaults": {
+      "title": "视频默认设置",
+      "outputFormat": "默认输出格式",
+      "quality": "默认质量",
+      "resolution": "默认分辨率",
+      "fps": "默认帧率"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "公司",
+      "about": "关于我们",
+      "careers": "招聘",
+      "press": "新闻",
+      "partners": "合作伙伴"
+    },
+    "product": {
+      "title": "产品",
+      "features": "功能",
+      "pricing": "价格",
+      "api": "API文档",
+      "changelog": "更新日志"
+    },
+    "support": {
+      "title": "支持",
+      "help": "帮助中心",
+      "contact": "联系我们",
+      "status": "服务状态",
+      "feedback": "反馈"
+    },
+    "legal": {
+      "title": "法律",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "cookies": "Cookie政策",
+      "license": "许可协议"
+    },
+    "social": {
+      "title": "关注我们",
+      "twitter": "Twitter",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "github": "GitHub"
+    },
+    "copyright": "© {year} SparkVideo. 保留所有权利。"
+  },
+  "errors": {
+    "404": {
+      "title": "页面未找到",
+      "message": "抱歉，您访问的页面不存在。",
+      "backHome": "返回首页"
+    },
+    "500": {
+      "title": "服务器错误",
+      "message": "抱歉，服务器出现错误，请稍后重试。",
+      "retry": "重试"
+    },
+    "offline": {
+      "title": "离线",
+      "message": "您似乎没有连接到互联网。"
+    },
+    "generic": {
+      "title": "出错了",
+      "message": "发生了一个错误，请重试。"
+    }
+  },
+  "notifications": {
+    "success": {
+      "uploaded": "文件上传成功",
+      "processed": "处理完成",
+      "saved": "保存成功",
+      "deleted": "删除成功",
+      "copied": "复制成功"
+    },
+    "error": {
+      "uploadFailed": "文件上传失败",
+      "processFailed": "处理失败",
+      "saveFailed": "保存失败",
+      "deleteFailed": "删除失败",
+      "networkError": "网络错误"
+    },
+    "info": {
+      "processing": "正在处理，请稍候...",
+      "uploading": "正在上传...",
+      "downloading": "正在下载..."
+    },
+    "warning": {
+      "unsavedChanges": "您有未保存的更改",
+      "quotaExceeded": "您已达到使用限制",
+      "largeFile": "文件较大，处理可能需要较长时间"
+    }
+  }
+}

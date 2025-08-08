@@ -1,0 +1,13 @@
+# SparkVideo Robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://sparkvideo.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

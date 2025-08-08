@@ -1,0 +1,522 @@
+{
+  "common": {
+    "appName": "SparkVideo",
+    "tagline": "Professional Video & Audio Processing Platform",
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "upload": "Upload",
+    "download": "Download",
+    "process": "Process",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "view": "View",
+    "share": "Share",
+    "copy": "Copy",
+    "paste": "Paste",
+    "selectFile": "Select File",
+    "dragDropFile": "Drag and drop files here or click to select",
+    "fileSize": "File Size",
+    "duration": "Duration",
+    "format": "Format",
+    "quality": "Quality",
+    "resolution": "Resolution",
+    "bitrate": "Bitrate",
+    "fps": "FPS",
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "failed": "Failed",
+      "cancelled": "Cancelled"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "video": "Video Processing",
+    "audio": "Audio Processing",
+    "documents": "Documents",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "subscription": "Subscription"
+  },
+  "hero": {
+    "title": "Professional Video & Audio Processing, All-in-One Solution",
+    "subtitle": "Process your video and audio files with AI technology, supporting compression, conversion, enhancement, transcription and more",
+    "cta": {
+      "getStarted": "Get Started Free",
+      "learnMore": "Learn More",
+      "watchDemo": "Watch Demo"
+    },
+    "features": {
+      "videoProcessing": "Video Processing",
+      "audioTranscription": "Audio Transcription",
+      "aiEnhancement": "AI Enhancement",
+      "multiFormat": "Multi-Format Support"
+    }
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Professional tools to meet all your needs",
+    "video": {
+      "title": "Video Processing",
+      "compress": "Smart Compression",
+      "compressDesc": "Reduce file size while maintaining quality",
+      "convert": "Format Conversion",
+      "convertDesc": "Support MP4, WebM, AVI and more formats",
+      "crop": "Crop & Resize",
+      "cropDesc": "Adjust video aspect ratio and dimensions",
+      "merge": "Video Merge",
+      "mergeDesc": "Combine multiple videos into one",
+      "split": "Video Split",
+      "splitDesc": "Split video by time or size",
+      "enhance": "Video Enhancement",
+      "enhanceDesc": "AI-powered video quality improvement"
+    },
+    "audio": {
+      "title": "Audio Processing",
+      "transcribe": "Speech to Text",
+      "transcribeDesc": "High-accuracy speech recognition, multi-language support",
+      "translate": "Audio Translation",
+      "translateDesc": "Audio translation preserving voice characteristics",
+      "convert": "Format Conversion",
+      "convertDesc": "Support MP3, WAV, AAC and more formats",
+      "enhance": "Audio Enhancement",
+      "enhanceDesc": "Noise reduction and quality improvement"
+    },
+    "ai": {
+      "title": "AI Enhancement Features",
+      "denoise": "Smart Denoising",
+      "denoiseDesc": "Remove video and audio noise",
+      "deblur": "Deblurring",
+      "deblurDesc": "Sharpen blurry videos",
+      "removeWatermark": "Watermark Removal",
+      "removeWatermarkDesc": "Intelligently remove video watermarks",
+      "removeBackground": "Background Removal",
+      "removeBackgroundDesc": "AI-powered background removal",
+      "subtitle": "Subtitle Generation",
+      "subtitleDesc": "Auto-generate multi-language subtitles"
+    }
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Flexible pricing to meet different needs",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "Save",
+    "currency": "Currency",
+    "popular": "Most Popular",
+    "currentPlan": "Current Plan",
+    "upgrade": "Upgrade",
+    "downgrade": "Downgrade",
+    "contact": "Contact Sales",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "description": "Perfect for personal trial",
+        "features": [
+          "5 videos per day",
+          "100MB max file size",
+          "Basic format conversion",
+          "720p output quality",
+          "Community support"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "$14.99",
+        "priceYearly": "$149.90",
+        "description": "Ideal for content creators",
+        "features": [
+          "100 videos per day",
+          "2GB max file size",
+          "All format conversions",
+          "4K output quality",
+          "AI enhancement features",
+          "Batch processing",
+          "Priority support",
+          "Watermark removal"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "For teams and businesses",
+        "features": [
+          "Unlimited video processing",
+          "5GB max file size",
+          "All premium features",
+          "8K output quality",
+          "API access",
+          "Dedicated account manager",
+          "Custom features",
+          "SLA guarantee",
+          "Priority processing queue"
+        ]
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up now",
+      "or": "Or",
+      "googleLogin": "Sign in with Google",
+      "errors": {
+        "invalidCredentials": "Invalid email or password",
+        "serverError": "Server error, please try again later"
+      }
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Start your video processing journey",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "agreeTerms": "I agree to the Terms of Service and Privacy Policy",
+      "submit": "Sign Up",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "or": "Or",
+      "googleSignUp": "Sign up with Google",
+      "errors": {
+        "emailExists": "Email already registered",
+        "passwordMismatch": "Passwords don't match",
+        "weakPassword": "Password is too weak",
+        "serverError": "Server error, please try again later"
+      }
+    },
+    "forgotPassword": {
+      "title": "Reset Password",
+      "subtitle": "Enter your email and we'll send you a reset link",
+      "email": "Email",
+      "submit": "Send Reset Link",
+      "backToLogin": "Back to login",
+      "success": "Reset link has been sent to your email"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}",
+    "overview": "Overview",
+    "recentTasks": "Recent Tasks",
+    "usage": "Usage",
+    "quickActions": "Quick Actions",
+    "stats": {
+      "videosProcessed": "Videos Processed",
+      "storageUsed": "Storage Used",
+      "processingTime": "Processing Time",
+      "savedSpace": "Space Saved"
+    },
+    "tasks": {
+      "title": "Task List",
+      "empty": "No tasks yet",
+      "viewAll": "View All",
+      "retry": "Retry",
+      "cancel": "Cancel",
+      "download": "Download Result"
+    }
+  },
+  "video": {
+    "upload": {
+      "title": "Upload Video",
+      "selectFile": "Select Video File",
+      "supportedFormats": "Supported formats: MP4, AVI, MOV, WMV, FLV, WebM",
+      "maxSize": "Max file size: {size}",
+      "uploading": "Uploading...",
+      "uploadComplete": "Upload Complete",
+      "uploadFailed": "Upload Failed"
+    },
+    "process": {
+      "title": "Processing Options",
+      "selectOperation": "Select Processing Operation",
+      "compress": {
+        "title": "Compress Video",
+        "quality": "Quality",
+        "targetSize": "Target Size",
+        "preset": {
+          "high": "High Quality",
+          "medium": "Medium Quality",
+          "low": "Low Quality",
+          "custom": "Custom"
+        }
+      },
+      "convert": {
+        "title": "Format Conversion",
+        "targetFormat": "Target Format",
+        "videoCodec": "Video Codec",
+        "audioCodec": "Audio Codec"
+      },
+      "crop": {
+        "title": "Crop Video",
+        "aspectRatio": "Aspect Ratio",
+        "custom": "Custom",
+        "presets": {
+          "16:9": "16:9 (Widescreen)",
+          "4:3": "4:3 (Standard)",
+          "1:1": "1:1 (Square)",
+          "9:16": "9:16 (Portrait)"
+        }
+      },
+      "enhance": {
+        "title": "Enhance Video",
+        "denoise": "Denoise",
+        "deblur": "Deblur",
+        "stabilize": "Stabilize",
+        "colorCorrect": "Color Correction",
+        "removeWatermark": "Remove Watermark",
+        "removeBackground": "Remove Background"
+      }
+    },
+    "download": {
+      "title": "Download Video",
+      "fromUrl": "Download from URL",
+      "supportedPlatforms": "Supported Platforms",
+      "enterUrl": "Enter Video URL",
+      "parse": "Parse",
+      "parsing": "Parsing...",
+      "selectQuality": "Select Quality",
+      "download": "Download"
+    }
+  },
+  "audio": {
+    "upload": {
+      "title": "Upload Audio",
+      "selectFile": "Select Audio File",
+      "supportedFormats": "Supported formats: MP3, WAV, AAC, FLAC, OGG",
+      "maxSize": "Max file size: {size}"
+    },
+    "transcribe": {
+      "title": "Speech to Text",
+      "language": "Language",
+      "autoDetect": "Auto Detect",
+      "selectLanguage": "Select Language",
+      "transcribing": "Transcribing...",
+      "result": "Transcription Result",
+      "accuracy": "Accuracy",
+      "editTranscript": "Edit Transcript",
+      "exportAs": "Export As",
+      "formats": {
+        "txt": "Plain Text",
+        "srt": "SRT Subtitles",
+        "vtt": "WebVTT Subtitles",
+        "json": "JSON Format"
+      }
+    },
+    "translate": {
+      "title": "Audio Translation",
+      "sourceLanguage": "Source Language",
+      "targetLanguage": "Target Language",
+      "preserveVoice": "Preserve Voice Characteristics",
+      "translating": "Translating..."
+    }
+  },
+  "document": {
+    "title": "Document Management",
+    "create": "Create Document",
+    "fromTranscription": "Create from Transcription",
+    "edit": "Edit Document",
+    "share": "Share Document",
+    "export": "Export",
+    "formats": {
+      "pdf": "PDF Document",
+      "docx": "Word Document",
+      "html": "Web Page"
+    },
+    "editor": {
+      "title": "Document Editor",
+      "formatting": "Formatting",
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "heading": "Heading",
+      "list": "List",
+      "link": "Link",
+      "image": "Image",
+      "table": "Table"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "latest": "Latest Posts",
+    "popular": "Popular Posts",
+    "categories": "Categories",
+    "tags": "Tags",
+    "search": "Search Posts",
+    "readMore": "Read More",
+    "minuteRead": "{count} min read",
+    "publishedOn": "Published on",
+    "author": "Author",
+    "share": "Share",
+    "related": "Related Posts",
+    "comments": "Comments"
+  },
+  "subscription": {
+    "title": "Subscription Management",
+    "currentPlan": "Current Plan",
+    "usage": "Usage",
+    "billing": "Billing",
+    "upgrade": "Upgrade Plan",
+    "cancel": "Cancel Subscription",
+    "renew": "Renew",
+    "history": "Billing History",
+    "nextBilling": "Next Billing Date",
+    "limits": {
+      "title": "Usage Limits",
+      "dailyVideos": "Daily Video Processing",
+      "fileSize": "Max File Size",
+      "storage": "Storage Space",
+      "concurrent": "Concurrent Tasks",
+      "apiCalls": "API Calls"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": {
+      "title": "Profile",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "avatar": "Avatar",
+      "bio": "Bio",
+      "update": "Update Profile"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "language": "Language",
+      "timezone": "Timezone",
+      "currency": "Currency",
+      "theme": "Theme",
+      "notifications": "Notifications",
+      "emailNotifications": "Email Notifications",
+      "pushNotifications": "Push Notifications"
+    },
+    "security": {
+      "title": "Security",
+      "changePassword": "Change Password",
+      "twoFactor": "Two-Factor Authentication",
+      "sessions": "Active Sessions",
+      "apiKeys": "API Keys"
+    },
+    "videoDefaults": {
+      "title": "Video Defaults",
+      "outputFormat": "Default Output Format",
+      "quality": "Default Quality",
+      "resolution": "Default Resolution",
+      "fps": "Default FPS"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "careers": "Careers",
+      "press": "Press",
+      "partners": "Partners"
+    },
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "api": "API Docs",
+      "changelog": "Changelog"
+    },
+    "support": {
+      "title": "Support",
+      "help": "Help Center",
+      "contact": "Contact Us",
+      "status": "Service Status",
+      "feedback": "Feedback"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "license": "License"
+    },
+    "social": {
+      "title": "Follow Us",
+      "twitter": "Twitter",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "github": "GitHub"
+    },
+    "copyright": "© {year} SparkVideo. All rights reserved."
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "message": "Sorry, the page you're looking for doesn't exist.",
+      "backHome": "Back to Home"
+    },
+    "500": {
+      "title": "Server Error",
+      "message": "Sorry, something went wrong on our end. Please try again later.",
+      "retry": "Retry"
+    },
+    "offline": {
+      "title": "Offline",
+      "message": "You appear to be offline. Please check your internet connection."
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "message": "An error occurred. Please try again."
+    }
+  },
+  "notifications": {
+    "success": {
+      "uploaded": "File uploaded successfully",
+      "processed": "Processing completed",
+      "saved": "Saved successfully",
+      "deleted": "Deleted successfully",
+      "copied": "Copied successfully"
+    },
+    "error": {
+      "uploadFailed": "File upload failed",
+      "processFailed": "Processing failed",
+      "saveFailed": "Save failed",
+      "deleteFailed": "Delete failed",
+      "networkError": "Network error"
+    },
+    "info": {
+      "processing": "Processing, please wait...",
+      "uploading": "Uploading...",
+      "downloading": "Downloading..."
+    },
+    "warning": {
+      "unsavedChanges": "You have unsaved changes",
+      "quotaExceeded": "You have reached your usage limit",
+      "largeFile": "Large file, processing may take longer"
+    }
+  }
+}
