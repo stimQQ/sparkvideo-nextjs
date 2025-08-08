@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { useAuthStore } from '@/app/store/auth.store';
@@ -9,12 +9,17 @@ import { useAuthStore } from '@/app/store/auth.store';
 export default function UserMenu() {
   const t = useTranslations();
   const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const { user, logout } = useAuthStore();
 
+  // Extract current locale from pathname
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const localePrefix = `/${currentLocale}`;
+
   const handleLogout = async () => {
     await logout();
-    router.push('/');
+    router.push(localePrefix);
   };
 
   return (
@@ -37,7 +42,7 @@ export default function UserMenu() {
             </div>
             
             <Link
-              href="/dashboard"
+              href={`${localePrefix}/dashboard`}
               className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
               onClick={() => setIsOpen(false)}
             >
@@ -45,7 +50,7 @@ export default function UserMenu() {
             </Link>
             
             <Link
-              href="/settings"
+              href={`${localePrefix}/settings`}
               className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
               onClick={() => setIsOpen(false)}
             >
@@ -53,7 +58,7 @@ export default function UserMenu() {
             </Link>
             
             <Link
-              href="/subscription"
+              href={`${localePrefix}/subscription`}
               className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
               onClick={() => setIsOpen(false)}
             >

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useAuthStore } from '@/app/store/auth.store';
 import Navbar from '@/app/components/layout/navbar';
@@ -11,6 +11,7 @@ import Footer from '@/app/components/layout/footer';
 export default function RegisterPage() {
   const t = useTranslations();
   const router = useRouter();
+  const pathname = usePathname();
   const { register, isLoading, error, clearError } = useAuthStore();
   const [formData, setFormData] = useState({
     name: '',
@@ -19,6 +20,10 @@ export default function RegisterPage() {
     confirmPassword: '',
     agreeTerms: false,
   });
+  
+  // Extract current locale from pathname
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const localePrefix = `/${currentLocale}`;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,7 +41,7 @@ export default function RegisterPage() {
     
     try {
       await register(formData.name, formData.email, formData.password);
-      router.push('/dashboard');
+      router.push(`${localePrefix}/dashboard`);
     } catch (err) {
       // Error is handled by the store
     }

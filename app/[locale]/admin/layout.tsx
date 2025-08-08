@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useAuthStore } from '@/app/store/auth.store';
 import AdminSidebar from '@/app/components/admin/sidebar';
 import AdminHeader from '@/app/components/admin/header';
@@ -12,7 +12,12 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
+  const pathname = usePathname();
   const { user, isAuthenticated, checkAuth } = useAuthStore();
+  
+  // Extract current locale from pathname
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const localePrefix = `/${currentLocale}`;
 
   useEffect(() => {
     checkAuth();
@@ -21,9 +26,9 @@ export default function AdminLayout({
   useEffect(() => {
     // 检查是否登录且是管理员
     if (!isAuthenticated) {
-      router.push('/login');
+      router.push(`${localePrefix}/login`);
     } else if (user?.role !== 'ADMIN') {
-      router.push('/dashboard');
+      router.push(`${localePrefix}/dashboard`);
     }
   }, [isAuthenticated, user, router]);
 

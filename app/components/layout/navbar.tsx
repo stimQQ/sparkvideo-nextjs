@@ -15,13 +15,17 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isAuthenticated } = useAuthStore();
 
+  // Extract current locale from pathname
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const localePrefix = `/${currentLocale}`;
+
   const navigation = [
-    { name: t('nav.home'), href: '/' },
-    { name: t('nav.video'), href: '/video' },
-    { name: t('nav.audio'), href: '/audio' },
-    { name: t('nav.documents'), href: '/documents' },
-    { name: t('nav.blog'), href: '/blog' },
-    { name: t('nav.pricing'), href: '/pricing' },
+    { name: t('nav.home'), href: localePrefix },
+    { name: t('nav.video'), href: `${localePrefix}/video` },
+    { name: t('nav.audio'), href: `${localePrefix}/audio` },
+    { name: t('nav.documents'), href: `${localePrefix}/documents` },
+    { name: t('nav.blog'), href: `${localePrefix}/blog` },
+    { name: t('nav.pricing'), href: `${localePrefix}/pricing` },
   ];
 
   return (
@@ -29,7 +33,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href={localePrefix} className="flex items-center space-x-2">
               <span className="text-2xl font-bold text-gradient">SparkVideo</span>
             </Link>
             <div className="hidden md:ml-10 md:flex md:space-x-8">
@@ -60,10 +64,10 @@ export default function Navbar() {
               <UserMenu />
             ) : (
               <div className="flex items-center space-x-4">
-                <Link href="/login" className="btn-ghost">
+                <Link href={`${localePrefix}/login`} className="btn-ghost">
                   {t('nav.login')}
                 </Link>
-                <Link href="/register" className="btn-primary">
+                <Link href={`${localePrefix}/register`} className="btn-primary">
                   {t('nav.register')}
                 </Link>
               </div>

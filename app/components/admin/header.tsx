@@ -1,23 +1,28 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useAuthStore } from '@/app/store/auth.store';
 
 export default function AdminHeader() {
   const router = useRouter();
+  const pathname = usePathname();
   const { user, logout } = useAuthStore();
+  
+  // Extract current locale from pathname
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const localePrefix = `/${currentLocale}`;
 
   const handleLogout = async () => {
     await logout();
-    router.push('/login');
+    router.push(`${localePrefix}/login`);
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 h-16 bg-card border-b z-50">
       <div className="h-full px-6 flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <Link href="/admin" className="flex items-center space-x-2">
+          <Link href={`${localePrefix}/admin`} className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-gradient">SparkVideo</span>
             <span className="text-sm bg-primary text-primary-foreground px-2 py-0.5 rounded">Admin</span>
           </Link>
@@ -25,7 +30,7 @@ export default function AdminHeader() {
 
         <div className="flex items-center space-x-4">
           <Link 
-            href="/" 
+            href={localePrefix} 
             target="_blank"
             className="text-sm text-muted-foreground hover:text-foreground"
           >
