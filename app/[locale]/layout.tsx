@@ -17,7 +17,6 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
-  const messages = await getMessages();
   const isZh = locale === 'zh';
   
   return {
@@ -108,12 +107,17 @@ export default async function RootLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  let messages;
+  try {
+    messages = (await import(`../i18n/messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
         </NextIntlClientProvider>
       </body>
