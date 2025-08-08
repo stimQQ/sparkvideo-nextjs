@@ -2,11 +2,17 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { useAuthStore } from '@/app/store/auth.store';
 
 export default function HeroSection() {
   const t = useTranslations();
+  const pathname = usePathname();
   const { isAuthenticated } = useAuthStore();
+  
+  // Extract current locale from pathname
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const localePrefix = `/${currentLocale}`;
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background">
@@ -20,11 +26,11 @@ export default function HeroSection() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             {isAuthenticated ? (
-              <Link href="/dashboard" className="btn-primary px-8 py-3 text-lg">
+              <Link href={`${localePrefix}/dashboard`} className="btn-primary px-8 py-3 text-lg">
                 {t('nav.dashboard')}
               </Link>
             ) : (
-              <Link href="/register" className="btn-primary px-8 py-3 text-lg">
+              <Link href={`${localePrefix}/register`} className="btn-primary px-8 py-3 text-lg">
                 {t('hero.cta.getStarted')}
               </Link>
             )}

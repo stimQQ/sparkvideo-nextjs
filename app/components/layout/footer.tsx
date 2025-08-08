@@ -1,9 +1,17 @@
+'use client';
+
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
   const t = useTranslations();
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+  
+  // Extract current locale from pathname
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const localePrefix = `/${currentLocale}`;
 
   return (
     <footer className="bg-muted/50 border-t">
@@ -20,22 +28,22 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.product.title')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/features" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/video`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.product.features')}
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/pricing`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.product.pricing')}
                 </Link>
               </li>
               <li>
-                <Link href="/api" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/documents`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.product.api')}
                 </Link>
               </li>
               <li>
-                <Link href="/changelog" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/blog`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.product.changelog')}
                 </Link>
               </li>
@@ -46,22 +54,22 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.company.title')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/about`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.company.about')}
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/blog`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.company.careers')}
                 </Link>
               </li>
               <li>
-                <Link href="/press" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/blog`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.company.press')}
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/pricing`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.company.partners')}
                 </Link>
               </li>
@@ -72,22 +80,22 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.support.title')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/help" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/documents`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.support.help')}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/pricing`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.support.contact')}
                 </Link>
               </li>
               <li>
-                <Link href="/status" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/blog`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.support.status')}
                 </Link>
               </li>
               <li>
-                <Link href="/feedback" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/pricing`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.support.feedback')}
                 </Link>
               </li>
@@ -98,22 +106,22 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.legal.title')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/blog`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.legal.privacy')}
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/blog`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.legal.terms')}
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/blog`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.legal.cookies')}
                 </Link>
               </li>
               <li>
-                <Link href="/license" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${localePrefix}/blog`} className="text-sm text-muted-foreground hover:text-foreground">
                   {t('footer.legal.license')}
                 </Link>
               </li>

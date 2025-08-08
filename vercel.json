@@ -64,14 +64,11 @@
   "redirects": [
     {
       "source": "/home",
-      "destination": "/",
+      "destination": "/zh",
       "permanent": true
     }
   ],
   "functions": {
-    "app/[locale]/page.tsx": {
-      "maxDuration": 10
-    },
     "app/api/sitemap/route.ts": {
       "maxDuration": 10
     },

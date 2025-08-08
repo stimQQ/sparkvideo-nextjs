@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import Navbar from '@/app/components/layout/navbar';
 import Footer from '@/app/components/layout/footer';
 import HeroSection from '@/app/components/home/hero-section';

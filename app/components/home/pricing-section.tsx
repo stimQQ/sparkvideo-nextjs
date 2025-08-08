@@ -2,12 +2,18 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { cn } from '@/app/lib/utils';
 
 export default function PricingSection() {
   const t = useTranslations();
+  const pathname = usePathname();
   const [isYearly, setIsYearly] = useState(false);
+  
+  // Extract current locale from pathname
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const localePrefix = `/${currentLocale}`;
 
   const plans = [
     {
@@ -111,7 +117,7 @@ export default function PricingSection() {
               </ul>
 
               <Link
-                href={plan.key === 'enterprise' ? '/contact' : '/register'}
+                href={plan.key === 'enterprise' ? `${localePrefix}/pricing` : `${localePrefix}/register`}
                 className={cn(
                   'block w-full text-center rounded-md px-4 py-2 text-sm font-medium',
                   plan.popular
