@@ -2,23 +2,31 @@
 
 ## 你需要在 Vercel 上配置的环境变量
 
-### 必需的环境变量
+### 必需的环境变量（仅需2个）
 
 | 变量名 | 值 | 说明 |
 |--------|-----|------|
 | `NEXT_PUBLIC_API_URL` | `https://api.sparkvideo.cc` | 后端 API 地址 |
 | `NEXT_PUBLIC_SITE_URL` | `https://sparkvideo.cc` | 前端网站地址 |
-| `NEXTAUTH_URL` | `https://sparkvideo.cc` | NextAuth 认证 URL |
-| `JWT_SECRET` | 生成随机字符串 | JWT 签名密钥 |
-| `NEXTAUTH_SECRET` | 生成随机字符串 | NextAuth 加密密钥 |
 
 ### 可选的环境变量
 
 | 变量名 | 示例值 | 说明 |
 |--------|--------|------|
-| `DATABASE_URL` | `postgresql://...` | 数据库连接字符串 |
-| `REDIS_URL` | `redis://...` | Redis 缓存连接 |
 | `NEXT_PUBLIC_GOOGLE_ANALYTICS` | `G-XXXXXXXXXX` | Google Analytics ID |
+| `NEXT_PUBLIC_SENTRY_DSN` | `https://xxx@sentry.io/xxx` | Sentry 错误追踪 |
+
+## 为什么这么简单？
+
+因为你的后端已经处理了：
+- ✅ 用户认证（登录/注册）
+- ✅ Token 管理
+- ✅ 会话管理
+- ✅ API 安全验证
+
+前端只需要知道：
+- 调用哪个 API（`NEXT_PUBLIC_API_URL`）
+- 网站自己的地址（`NEXT_PUBLIC_SITE_URL`）
 
 ## 如何在 Vercel 上配置
 
@@ -42,18 +50,6 @@
    - 点击 "Save"
    - 触发重新部署以应用新配置
 
-## 生成随机密钥
-
-在终端运行以下命令生成安全的随机密钥：
-
-```bash
-# macOS/Linux
-openssl rand -base64 32
-
-# 或使用 Node.js
-node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
-```
-
 ## 验证配置
 
 部署后访问你的网站，检查：
@@ -62,6 +58,5 @@ node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
 
 ## 注意事项
 
-- `NEXT_PUBLIC_` 前缀的变量会暴露给客户端，请勿放置敏感信息
-- 生产环境的密钥请使用强随机字符串
-- 定期更新密钥以保证安全性
+- `NEXT_PUBLIC_` 前缀的变量会暴露给客户端，这是正常的（API地址本来就是公开的）
+- 所有敏感信息（如用户Token）应该由后端管理，前端通过 Cookie 或 localStorage 存储后端返回的 Token
