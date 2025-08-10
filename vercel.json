@@ -59,8 +59,11 @@
   ],
   "env": {
     "NEXT_PUBLIC_API_URL": "@api_url",
+    "NEXT_PUBLIC_SITE_URL": "@site_url",
     "DATABASE_URL": "@database_url",
     "JWT_SECRET": "@jwt_secret",
+    "NEXTAUTH_URL": "@nextauth_url",
+    "NEXTAUTH_SECRET": "@nextauth_secret",
     "NEXT_PUBLIC_GOOGLE_ANALYTICS": "@ga_id",
     "REDIS_URL": "@redis_url"
   }
