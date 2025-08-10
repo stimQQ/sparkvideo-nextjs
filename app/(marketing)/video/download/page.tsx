@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { PLATFORM_CATEGORIES, getPlatformBySlug } from '@/lib/constants/platforms'
+import { VIDEO_PLATFORMS, getPlatformBySlug } from '@/lib/constants/platforms'
 import { VideoDownloader } from '@/components/features/download/VideoDownloader'
 import { PlatformNav } from '@/components/features/download/PlatformNav'
 import { useAppStore } from '@/stores/useAppStore'
@@ -38,7 +38,7 @@ export default function VideoDownloadCenter() {
           {/* Left Sidebar - Platform Navigation */}
           <aside className="w-64 flex-shrink-0">
             <PlatformNav
-              categories={PLATFORM_CATEGORIES}
+              platforms={VIDEO_PLATFORMS}
               selectedPlatform={currentPlatform}
               onSelectPlatform={handlePlatformSelect}
             />
