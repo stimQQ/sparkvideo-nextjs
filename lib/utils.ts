@@ -41,28 +41,62 @@ export function isValidUrl(url: string): boolean {
 
 // 验证视频URL
 export function isValidVideoUrl(url: string): boolean {
-  if (!isValidUrl(url)) return false
+  // 首先检查是否是有效的URL格式
+  if (!url || url.trim() === '') return false
   
+  // 支持多种URL格式，包括短链接和移动端链接
   const videoPatterns = [
-    'youtube.com/watch',
-    'youtu.be/',
-    'tiktok.com/',
-    'instagram.com/',
-    'facebook.com/',
-    'bilibili.com/',
-    'douyin.com/',
-    'kuaishou.com/',
-    'xiaohongshu.com/',
-    'weibo.com/',
-    'twitter.com/',
-    'vimeo.com/',
-    'dailymotion.com/',
-    'pinterest.com/',
-    'reddit.com/',
-    'twitch.tv/',
+    // YouTube
+    /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i,
+    // TikTok
+    /tiktok\.com|vm\.tiktok\.com/i,
+    // Instagram
+    /instagram\.com|instagr\.am/i,
+    // Facebook
+    /facebook\.com|fb\.watch|fb\.com/i,
+    // Bilibili
+    /bilibili\.com|b23\.tv/i,
+    // 抖音
+    /douyin\.com|v\.douyin\.com/i,
+    // 快手
+    /kuaishou\.com|v\.kuaishou\.com/i,
+    // 小红书
+    /xiaohongshu\.com|xhslink\.com/i,
+    // 微博
+    /weibo\.com|weibo\.cn|m\.weibo\.cn/i,
+    // Twitter/X
+    /twitter\.com|x\.com/i,
+    // Vimeo
+    /vimeo\.com/i,
+    // Dailymotion
+    /dailymotion\.com|dai\.ly/i,
+    // Pinterest
+    /pinterest\.com|pin\.it/i,
+    // Reddit
+    /reddit\.com|redd\.it/i,
+    // Twitch
+    /twitch\.tv/i,
+    // 通用视频文件
+    /\.(mp4|avi|mov|wmv|flv|mkv|webm|m3u8)(\?|$)/i
   ]
   
-  return videoPatterns.some(pattern => url.includes(pattern))
+  // 检查URL是否匹配任何视频平台模式
+  const urlLower = url.toLowerCase()
+  const isVideoPattern = videoPatterns.some(pattern => pattern.test(urlLower))
+  
+  // 如果匹配视频平台，直接返回true
+  if (isVideoPattern) return true
+  
+  // 尝试解析为标准URL格式
+  try {
+    const urlObj = new URL(url)
+    // 检查是否是http或https协议
+    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:'
+  } catch {
+    // 如果不是标准URL，可能是短链接或特殊格式
+    // 检查是否看起来像一个链接（包含域名特征）
+    return /^(https?:\/\/)?[\w\-]+(\.[\w\-]+)+[/#?]?.*$/i.test(url)
+  }
 }
 
 // 生成唯一ID
