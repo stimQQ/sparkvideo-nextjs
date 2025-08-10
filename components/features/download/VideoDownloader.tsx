@@ -20,14 +20,13 @@ export const VideoDownloader: React.FC<VideoDownloaderProps> = ({ platform }) =>
   const [error, setError] = useState<string | null>(null)
   const { addToQueue, isAuthenticated } = useAppStore()
 
-  // 监听剪贴板
+  // 监听剪贴板（可选功能）
   useEffect(() => {
     const checkClipboard = async () => {
       try {
         const text = await navigator.clipboard.readText()
-        // 自动检测剪贴板中的视频链接
-        if (isValidVideoUrl(text)) {
-          // 检查是否可能是当前平台的链接
+        // 如果剪贴板有内容且包含当前平台域名，自动填充
+        if (text && text.trim() && platform.domain) {
           const platformDomains = platform.domain.split(',').map(d => d.trim())
           const isCurrentPlatform = platformDomains.some(domain => 
             text.toLowerCase().includes(domain.toLowerCase())
@@ -37,25 +36,20 @@ export const VideoDownloader: React.FC<VideoDownloaderProps> = ({ platform }) =>
           }
         }
       } catch (err) {
-        // 用户可能未授权剪贴板访问
-        console.log('Clipboard access denied')
+        // 用户可能未授权剪贴板访问，这是正常的
       }
     }
     
+    // 仅在组件加载时检查一次
     checkClipboard()
   }, [platform])
 
   const handleAnalyze = async () => {
-    if (!videoUrl || videoUrl.trim() === '') {
-      setError('请输入视频链接')
-      return
-    }
-
-    // 清理URL（去除空格和特殊字符）
+    // 清理URL（去除首尾空格）
     const cleanUrl = videoUrl.trim()
-
-    if (!isValidVideoUrl(cleanUrl)) {
-      setError('请输入有效的视频链接（支持YouTube、TikTok、Instagram等主流平台）')
+    
+    if (!cleanUrl) {
+      setError('请输入视频链接')
       return
     }
 
@@ -64,23 +58,15 @@ export const VideoDownloader: React.FC<VideoDownloaderProps> = ({ platform }) =>
     setVideoInfo(null)
 
     try {
-      // 发送清理后的URL到API
+      // 直接发送URL到后端，让后端处理验证
       const result = await api.videos.parse(cleanUrl, platform.slug)
       setVideoInfo(result)
       if (result.formats && result.formats.length > 0) {
         setSelectedQuality(result.formats[0].quality_note)
       }
     } catch (err: any) {
-      // 提供更详细的错误信息
-      if (err.message?.includes('network')) {
-        setError('网络连接失败，请检查网络设置')
-      } else if (err.message?.includes('not found')) {
-        setError('视频不存在或已被删除')
-      } else if (err.message?.includes('private')) {
-        setError('该视频为私密视频，无法下载')
-      } else {
-        setError(err.message || '解析失败，请确认链接是否正确或稍后重试')
-      }
+      // 显示后端返回的错误信息
+      setError(err.message || '解析失败，请检查链接是否正确')
     } finally {
       setIsAnalyzing(false)
     }
